@@ -1,1 +1,98 @@
-/* css styles */
+/* --- 0. Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* --- 1. Global Settings --- */
+html, body {
+  margin: 0; padding: 0; overflow-x: hidden;
+  background-color: #FDF5E6; color: #3C2A21;
+  font-family: 'Lora', serif !important;
+}
+body.nav-fixed { padding-top: 0 !important; }
+#quarto-header { margin-bottom: 0 !important; }
+.navbar { margin-bottom: 0 !important; background-color: #3C2A21 !important; border-bottom: none !important; }
+
+/* --- 2. Navbar --- */
+.navbar-brand { display: flex !important; align-items: center !important; gap: 15px !important; }
+.navbar-title { font-family: 'Playfair Display', serif !important; font-style: italic !important; font-weight: 700 !important; color: #FDF5E6 !important; font-size: 1.1rem !important; }
+.nav-link { font-family: 'Montserrat', sans-serif !important; text-transform: uppercase; color: #FDF5E6 !important; font-size: 0.8rem !important; }
+
+/* --- 3. Hero Section --- */
+.hero-section.column-screen {
+  background: linear-gradient(rgba(60, 42, 33, 0.75), rgba(60, 42, 33, 0.75)), 
+              url('coffee-bg.png') no-repeat center center; 
+  background-size: cover; min-height: 85vh; 
+  display: flex !important; flex-direction: column !important;
+  justify-content: center !important; align-items: center !important;
+  text-align: center !important; padding: 100px 20px !important; color: #FDF5E6 !important;
+}
+.hero-section h2 { color: #FDF5E6 !important; text-shadow: 2px 2px 10px rgba(0,0,0,0.6); font-size: 2.5rem !important; }
+
+.btn-outline-light {
+  margin-top: 30px; border: 2px solid #FDF5E6 !important; color: #FDF5E6 !important;
+  padding: 12px 35px !important; text-decoration: none !important;
+  font-family: 'Montserrat', sans-serif !important; font-weight: 700 !important;
+  display: inline-block; border-radius: 8px !important; text-transform: uppercase !important; letter-spacing: 1.5px; transition: all 0.3s ease;
+}
+.btn-outline-light:hover { background-color: #FDF5E6 !important; color: #3C2A21 !important; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+/* --- 4. Content Sections --- */
+.content-section { padding: 80px 0; }
+.content-section h2 { text-align: center !important; font-family: 'Playfair Display', serif !important; font-weight: 700; color: #3C2A21; }
+.single-line-title { font-family: 'Playfair Display', serif !important; color: #3C2A21; font-weight: 700; font-size: 1.5rem !important; margin-bottom: 5px !important; }
+
+/* --- 5. Prototype Section with Background Image --- */
+#prototypes {
+  padding: 100px 5%;
+  /* REPLACE 'lab-bg.png' with your prepared image */
+  background: linear-gradient(rgba(60, 42, 33, 0.8), rgba(60, 42, 33, 0.8)), 
+              url('lab-bg.png') no-repeat center center;
+  background-size: cover; background-attachment: fixed;
+  color: #FDF5E6 !important; text-align: center;
+}
+.proto-header-text h2 { color: #FDF5E6 !important; margin-bottom: 20px; font-family: 'Playfair Display', serif !important; }
+.proto-header-text p { color: #D4A373; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px; }
+
+/* Slider Logic */
+.prototype-slider {
+  display: flex; overflow-x: auto; gap: 30px;
+  padding: 20px 15px 50px 15px; scroll-snap-type: x mandatory; 
+  scrollbar-width: thin; scrollbar-color: #D4A373 transparent; -webkit-overflow-scrolling: touch;
+}
+.prototype-slider::-webkit-scrollbar { height: 8px; }
+.prototype-slider::-webkit-scrollbar-thumb { background: #D4A373; border-radius: 10px; }
+
+.proto-card {
+  width: 300px; /* FIXED WIDTH TO PREVENT 'TOO WIDE' LOOK */
+  background: white; border-radius: 20px; overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.07); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  flex: 0 0 auto; scroll-snap-align: start; border: 1px solid #eee;
+}
+.proto-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(60, 42, 33, 0.15); }
+
+.proto-img-wrapper { position: relative; height: 200px; overflow: hidden; }
+.proto-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.proto-card:hover .proto-img-wrapper img { transform: scale(1.1); }
+
+.proto-number {
+  position: absolute; top: 15px; left: 15px; background: rgba(60, 42, 33, 0.9);
+  color: #FDF5E6; padding: 4px 12px; border-radius: 50px; font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 800; z-index: 2;
+}
+
+.proto-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(60, 42, 33, 0.65); display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s ease; z-index: 3;
+}
+.proto-card:hover .proto-overlay { opacity: 1; }
+
+.proto-info { padding: 25px; text-align: left; }
+.proto-tag { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: #D4A373; margin-bottom: 8px; display: block; }
+.proto-info h4 { font-family: 'Playfair Display', serif; color: #3C2A21; font-weight: 700; margin-bottom: 12px; }
+.proto-info p { font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0; }
+
+.btn-light { background-color: #FDF5E6 !important; color: #3C2A21 !important; border-radius: 5px !important; text-decoration: none !important; font-weight: bold; padding: 10px 20px; }
+
+/* --- 6. Misc --- */
+.shiny-placeholder { text-align: center; padding: 60px; border: 2px dashed #3C2A21; border-radius: 15px; background: rgba(60, 42, 33, 0.05); }
+.quarto-secondary-nav, .quarto-btn-toggle, #TOC { display: none !important; }
+hr { width: 90%; margin: 2rem auto !important; opacity: 0.15; }
