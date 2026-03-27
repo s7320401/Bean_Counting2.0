@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Bean Counting2.0:<br>Shifting Loyal Beans<br>from At-Risk Grinds",
-    "section": "",
-    "text": "Decoding customer behavior through Visual Analytics.  Transforming churn data into brewing success.\nExplore the Analytics"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -14,88 +7,11 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "Bean Counting 2.0",
-    "section": "📝 Introduction",
-    "text": "📝 Introduction\n這裡放你的介紹內容…"
-  },
-  {
-    "objectID": "index.html#rshiny-app",
-    "href": "index.html#rshiny-app",
-    "title": "Bean Counting 2.0",
-    "section": "📊 RShiny App",
-    "text": "📊 RShiny App\n\nInteractive Dashboard Coming Soon\nExperience the brewing process through real-time data exploration."
-  },
-  {
-    "objectID": "index.html#team",
-    "href": "index.html#team",
-    "title": "Bean Counting 2.0",
-    "section": "👥 Team",
-    "text": "👥 Team\n\nMember 1\nMember 2"
-  },
-  {
-    "objectID": "index.html#poster",
-    "href": "index.html#poster",
-    "title": "Bean Counting 2.0",
-    "section": "🖼️ Poster",
-    "text": "🖼️ Poster"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Bean Counting 2.0",
-    "section": "✉️ Contact",
-    "text": "✉️ Contact\ncooper@example.com"
-  },
-  {
-    "objectID": "index.html#shifting-loyal-beans-from-at-risk-grinds",
-    "href": "index.html#shifting-loyal-beans-from-at-risk-grinds",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Bean Counting2.0:<br>Shifting Loyal Beans<br>from At-Risk Grinds",
     "section": "",
     "text": "Decoding customer behavior through Visual Analytics.  Transforming churn data into brewing success.\nExplore the Analytics"
-  },
-  {
-    "objectID": "index.html#the-art-of-data-brewing-from-seed-to-sip",
-    "href": "index.html#the-art-of-data-brewing-from-seed-to-sip",
-    "title": "Bean Counting 2.0",
-    "section": "📝 The Art of Data Brewing: From Seed to Sip",
-    "text": "📝 The Art of Data Brewing: From Seed to Sip\n\nIn the world of specialty coffee, moving from a raw seed to a perfect cup requires precision, grading, and constant monitoring. Similarly, our project treats raw banking data as “green beans,” applying visual analytics and machine learning to refine them into actionable business insights.\n\n\n\n\n🌿\n\nHarvesting Insight\n\n\nAnalysing Spending Behaviours\n\n\n\nJust as harvesting ripe cherries is the foundation of quality, understanding transaction frequency and volume serves as our “origin” data. We identify core behaviors that drive stability and uncover raw potential.\n\n\n\n\n⚖️\n\nGrading the Roast\n\n\nComparing Occupations\n\n\n\nGreen beans must be meticulously graded. We treat “Occupation” as a critical grading metric, comparing engagement across diverse backgrounds to identify “premium segments.”\n\n\n\n\n☕\n\nThe Final Cupping\n\n\nChurn Probability Prediction\n\n\n\nPredicting churn is like cupping for defects. Using predictive modeling, we act as a quality control layer, providing early warnings to ensure customer relationships remain bold."
-  },
-  {
-    "objectID": "index.html#the-roasting-team",
-    "href": "index.html#the-roasting-team",
-    "title": "Bean Counting2.0:<br>Shifting Loyal Beans<br>from At-Risk Grinds",
-    "section": "👥 The Roasting Team",
-    "text": "👥 The Roasting Team\n\n\nDODDAPANENI Virinchi\n\n\nSU Bo-Han (Cooper)\n\n\nYU DONGHUI"
-  },
-  {
-    "objectID": "index.html#project-poster",
-    "href": "index.html#project-poster",
-    "title": "Bean Counting 2.0",
-    "section": "🖼️ Project Poster",
-    "text": "🖼️ Project Poster"
-  },
-  {
-    "objectID": "index.html#get-in-touch",
-    "href": "index.html#get-in-touch",
-    "title": "Bean Counting 2.0",
-    "section": "✉️ Get in Touch",
-    "text": "✉️ Get in Touch\n\ncooper@example.com"
-  },
-  {
-    "objectID": "index.html#sifting-loyal-beans-from-at-risk-grinds",
-    "href": "index.html#sifting-loyal-beans-from-at-risk-grinds",
-    "title": "Bean Counting 2.0",
-    "section": "",
-    "text": "Decoding customer behavior through Visual Analytics.  Transforming churn data into brewing success.\nExplore the Analytics"
-  },
-  {
-    "objectID": "index.html#format-html",
-    "href": "index.html#format-html",
-    "title": "Bean Counting 2.0",
-    "section": "format: html",
-    "text": "format: html"
   },
   {
     "objectID": "index.html#bean-counting-2.0-shifting-loyal-beans-from-at-risk-grinds",
@@ -105,17 +21,17 @@
     "text": "Decoding customer behavior through Visual Analytics.  Transforming churn data into brewing success.\nExplore the Analytics"
   },
   {
-    "objectID": "index.html#html",
-    "href": "index.html#html",
+    "objectID": "index.html#rshiny-app",
+    "href": "index.html#rshiny-app",
     "title": "Bean Counting2.0:<br>Shifting Loyal Beans<br>from At-Risk Grinds",
-    "section": "HTML",
-    "text": "HTML\n\n\n    \n        \n        RSHINY APP\n        \n    \n    Understand the spending nature of customers.\n\n\n\n    \n    \n        \n        \n        \n    \n\n    \n        Interactive Customer Dashboard\n        \n            Experience our comprehensive visual analytics platform. Explore customer segments, analyze spending behaviors, and predict churn risks through our real-time interactive dashboard.\n        \n\n        \n           EXPLORE THE ANALYTICS DASHBOARD\n        \n        \n        \n            * Best viewed on desktop for an optimal interactive experience.\n        \n    \n\n\n\n\n\n\n🖼️ Project Poster\n\n\n\n\n\nDownload Poster (PDF)\n\n\n\n\n\n\n\nPrototypes\n\n\nExplore our data refinery process, from raw sorting to the final predictive brew.\n\n\n\n\n\n\n01\n\n\n\nView Analysis\n\n\n\n\nData Preparation\n\n\nCleaning the Beans\n\n\nFiltering and structuring “green” data to ensure every observation meets our quality standards.\n\n\n\n\n\n\n02\n\n\n\nView Analysis\n\n\n\n\nExploratory Analysis\n\n\nVisual Grading\n\n\nUncovering the hidden aroma of consumer behavior through visual distributions and trend discovery.\n\n\n\n\n\n\n03\n\n\n\nView Analysis\n\n\n\n\nConfirmative Analysis\n\n\nFlavor Profiling\n\n\nTesting statistical hypotheses to confirm core variables that define loyal vs. at-risk customers.\n\n\n\n\n\n\n04\n\n\n\nView Analysis\n\n\n\n\nClustering Analysis\n\n\nVarietal Sorting\n\n\nSegmenting customers into distinct “bean profiles” to identify specific groups prone to churning.\n\n\n\n\n\n\n05\n\n\n\nView Analysis\n\n\n\n\nDecision Tree\n\n\nThe Extraction Logic\n\n\nDeveloping automated logic to predict churn risks and optimize our retention brewing strategy."
+    "section": "RShiny App",
+    "text": "RShiny App\n\nUNDERSTAND THE SPENDING NATURE OF CUSTOMERS\nExperience our comprehensive visual analytics platform for the Bean Counting 2.0 project. Explore customer segments, analyze spending behaviors, and predict churn risks through our real-time interactive dashboard.\n\nExplore the Analytics Dashboard\n\nBest viewed on desktop for an optimal interactive experience."
   },
   {
-    "objectID": "index.html#markdown",
-    "href": "index.html#markdown",
-    "title": "Bean Counting 2.0",
-    "section": "",
-    "text": "title: “Bean Counting 2.0” format: html: page-layout: full toc: false —"
+    "objectID": "index.html#the-roasting-team",
+    "href": "index.html#the-roasting-team",
+    "title": "Bean Counting2.0:<br>Shifting Loyal Beans<br>from At-Risk Grinds",
+    "section": "👥 The Roasting Team",
+    "text": "👥 The Roasting Team\n\n\nDODDAPANENI Virinchi\n\n\nSU Bo-Han (Cooper)\n\n\nYU DONGHUI"
   }
 ]

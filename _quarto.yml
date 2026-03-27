@@ -12,6 +12,8 @@ website:
         href: "index.qmd#introduction"
       - text: "RShiny App"
         href: "index.qmd#shiny-app"
+      - text: "User Guide"
+        href: "https://canva.link/9vqtr13fmxxpnv6"
       - text: "Team"
         href: "index.qmd#team"
       - text: "Poster"
