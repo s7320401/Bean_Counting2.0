@@ -9,7 +9,6 @@ pacman::p_load(
   data.tree, shinydashboard, shinycustomloader, bsicons, caret, ranger
 )
 
-# 1. 數據預處理 (確保欄位正確)
 df_raw <- read_csv("colombia_customers_processed.csv", show_col_types = FALSE) %>%
   mutate(
     across(where(is.character), as.factor),
@@ -70,7 +69,7 @@ ui <- page_navbar(
             )
   ),
   
-  # --- 3. 🎯 Strategic Clustering (完全找回原始 Insight 邏輯) ---
+  # --- 3. 🎯 Strategic Clustering ---
   nav_panel("🎯 Strategic Clustering",
             sidebarLayout(
               sidebarPanel(
@@ -141,7 +140,7 @@ server <- function(input, output, session) {
   profile_plot_obj <- eventReactive(input$run_profile, { req(input$profile_metrics); prof_df <- df_raw %>% group_by(clv_segment) %>% summarise(across(all_of(input$profile_metrics), mean)) %>% pivot_longer(-clv_segment); if(input$standardize_profile) prof_df <- prof_df %>% group_by(name) %>% mutate(value = as.numeric(scale(value))); ggplot(prof_df, aes(x = clv_segment, y = value, fill = clv_segment)) + geom_col() + facet_wrap(~name, scales = "free_y") + scale_fill_manual(values = c("#D7CCC8", "#BCAAA4", "#8D6E63", "#C5A381")) + theme_minimal() }, ignoreNULL = FALSE)
   output$profilePlot <- renderPlotly({ ggplotly(profile_plot_obj()) })
   
-  # --- Clustering 核心邏輯 (完全找回) ---
+  # --- Clustering  ---
   clust_res <- eventReactive(input$run_clust, {
     set.seed(42)
     df_s <- df_raw %>% sample_n(min(nrow(.), 5000))
@@ -150,7 +149,7 @@ server <- function(input, output, session) {
     list(data = df_s %>% mutate(cluster = as.factor(km$cluster)))
   }, ignoreNULL = FALSE)
   
-  # 判斷當前戰略模式
+ 
   current_mode <- reactive({
     v_h <- input$w_vol > 0.5; r_h <- input$w_risk > 0.5
     if (v_h && r_h) return(list(m="Premium", i="gem", d="Elite Growth Focus"))
@@ -159,7 +158,7 @@ server <- function(input, output, session) {
     return(list(m="Balanced", i="balance-scale", d="Market Stability"))
   })
   
-  # 計算職業排名核心邏輯
+
   priority_data <- reactive({
     req(clust_res())
     clust_res()$data %>% 
@@ -202,7 +201,7 @@ server <- function(input, output, session) {
   output$cluster_scatter <- renderPlotly({ req(clust_res()); p <- ggplot(clust_res()$data, aes(x = total_tx_volume, y = churn_probability, color = cluster)) + geom_point(alpha = 0.5) + scale_x_log10(labels = comma) + theme_minimal() + scale_color_brewer(palette = "BrBG"); ggplotly(p) })
   output$persona_table <- renderDT({ req(clust_res()); clust_res()$data %>% group_by(cluster) %>% summarise(Count = n(), Avg_Risk = percent(mean(churn_probability)), Avg_Vol = dollar(mean(total_tx_volume))) %>% datatable(options = list(dom = 't'), rownames = FALSE) })
   
-  # 其他 ML 邏輯
+
   dt_model <- eventReactive(input$run_dt, { data <- df_raw %>% select(all_of(ml_vars)) %>% na.omit(); rpart(churn_probability ~ ., data = data, method = "anova", control = rpart.control(cp = input$dt_cp, maxdepth = input$dt_depth)) }, ignoreNULL = TRUE)
   output$dt_plot <- renderDiagonalNetwork({ req(dt_model()); diagonalNetwork(List = ToListExplicit(as.Node(dt_model()), unname = TRUE), fontSize = 12, opacity = 0.9) })
   output$dt_cp_plot <- renderPlot({ req(dt_model()); plotcp(dt_model()) })
